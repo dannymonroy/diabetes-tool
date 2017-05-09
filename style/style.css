@@ -65,8 +65,16 @@ h2{
   font-size: 2em;
   margin: 0.5em 0;
 }
+
+h2:first-child{
+  margin-top: 0;
+}
 h3{
   font-size: 1.7em;
+}
+h4{
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 p{
@@ -123,4 +131,17 @@ main{
   float: left;
   padding: 0.5em;
   overflow: hidden;
+}
+
+.float{
+  clear: both;
+}
+
+footer{
+  clear: both;
+  margin-top: 0.8em;
+  background-color: #FFFFFF;
+  text-align: center;
+  border-radius: 20px;
+  padding: 1em;
 }
