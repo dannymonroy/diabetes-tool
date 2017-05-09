@@ -94,8 +94,9 @@ header{
 }
 
 header h3{
-  text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
+	font-style: italic;
+	margin-left: 1em;
 
 }
 nav{
@@ -140,10 +141,6 @@ footer{
   width: 50%;
 }
 
-
-
-
-
 .image{
   display: inline;
   float: left;
@@ -151,8 +148,38 @@ footer{
   overflow: hidden;
 }
 
+input[type="text"] {
+    //border: dashed white;
+    border-radius: 5%;
+    background-color: #609DBC;
+    font-size: 2em;
+    text-align: center;
+    width: 90px;
+    height: 60px;
+    display: block;
+    position: inherit;
+    margin: 1% auto;
+		color: #FFFFFF;
+}
+
+span {
+    display: none;
+    font-size: 1.3em;
+    font-family: "Helvetica", sans-serif;
+    color: black;
+    border: groove black;
+    background-color: lavender;
+    padding: 1%;
+    margin-top: 2%;
+    text-align: center;
+}
+
 /*Tool Style*/
 
 #question1{
   display: none;
+}
+
+#question2{
+	display: none;
 }

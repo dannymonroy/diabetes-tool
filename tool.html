@@ -4,16 +4,15 @@
       <meta charset="UTF-8">
       <title>Independent Diabetes Tool</title>
       <link rel="stylesheet" href="style/style.css" type="text/css">
-      <script type="text/javascript" src="script/script2.js">
-
-      </script>
+      <script type="text/javascript" src="script/script2.js"></script>
   </head>
   <body>
+    <a href="index.html">
       <header>
         <h1>Independent Diabetes Tool</h1>
         <h3>Find out your risk for diabetes</h3>
       </header>
-
+    </a>  
       <main>
 
         <!-- Introduction -->
@@ -26,11 +25,22 @@
           <a href="index.html"><div class="button tool" id=back>Back</div></a>
         </div>
         <!-- Question 1: Gender -->
-            <div id="question1">
-            <h2 id="gender_title">1) What is your gender?</h2>
-            <div class="button" id=male>Male</div>
-            <div class="button" id=female>Female</div>
-            </div>
+        <div id="question1">
+          <h2 id="gender_title">1) What is your gender?</h2>
+          <div class="button tool" id=male>Male</div>
+          <div class="button tool" id=female>Female</div>
+        </div>
+        <!-- Question 2: Age -->
+        <div id="question2">
+          <h2 id="age_title">2) What is your age?</h2>
+          <input type="text" id="age" class="input_box" autofocus="autofocus">
+          <span id="ageEmpty">You can't leave the field blank</span>
+          <span id="ageWrong">Please introduce a valid age. Try again.</span>
+          <span id="ageYoung">You won't be able to find out your risk using the "Independent Diabetes Tool" if you're under 18.
+               This is because your risk of Type 2 diabetes will not be accurate.</span>
+          <br>
+          <div class="button tool" id="ok_age">Ok</div>
+       </div>
 
       </main>
       <footer>
