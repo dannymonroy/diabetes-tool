@@ -11,11 +11,14 @@ function startTest(){
 
 function transition(num) {
     if(num != 3) {
+        document.getElementById("ethnic_title").style.display = "none";
         document.getElementById("question" + (num - 1)).style.display = "none";
         document.getElementById("question" + num).style.display = "inline";
     } else {
+        document.getElementById("ethnic_title").style.display = "block";
         document.getElementById("question" + (num - 1)).style.display = "none";
-        document.getElementById("question" + num).style.display = "inline-block";
+        document.getElementById("question" + num).style.display = "flex";
+
     }
 }
 
@@ -112,8 +115,57 @@ function ageValidation() {
     }
 }
 
+function ethnicValidation() {
+
+    document.getElementById("asian").onclick = function () {
+        value += 6;
+        document.getElementById("ethnic_title").innerHTML = "Your ethnic background is Asian";
+        window.setTimeout(transition, 1500, 4);
+    }
+    document.getElementById("black").onclick = function () {
+        value += 6;
+        document.getElementById("ethnic_title").innerHTML = "Your ethnic background is Black";
+        window.setTimeout(transition, 1500, 4);
+    }
+    document.getElementById("chinese").onclick = function () {
+        value += 6;
+        document.getElementById("ethnic_title").innerHTML = "Your ethnic background is Chinese";
+        window.setTimeout(transition, 1500, 4);
+    }
+    document.getElementById("mixed").onclick = function () {
+        value += 6;
+        document.getElementById("ethnic_title").innerHTML = "Your ethnic background is Mixed";
+        window.setTimeout(transition, 1500, 4);
+    }
+    document.getElementById("white").onclick = function () {
+        value += 0;
+        document.getElementById("ethnic_title").innerHTML = "Your ethnic background is White";
+        window.setTimeout(transition, 1500, 4);
+    }
+    document.getElementById("none").onclick = function () {
+        value += 6;
+        document.getElementById("ethnic_title").innerHTML = "You have other ethnic background";
+        window.setTimeout(transition, 1500, 4);
+    }
+}
+
+function familyValidation() {
+    document.getElementById("familyYes").onclick = function () {
+        value += 5;
+        document.getElementById("family_title").innerHTML = "You do have immediate family that have diabetes";
+        window.setTimeout(transition, 1500, 5);
+    }
+    document.getElementById("familyNo").onclick = function () {
+        value += 0;
+        document.getElementById("family_title").innerHTML = "You do not have immediate family that have diabetes";
+        window.setTimeout(transition, 1500, 5);
+    }
+}
+
 window.onload = function () {
   startTest();
   genderValidation();
   ageValidation();
+  ethnicValidation();
+  familyValidation();
 }

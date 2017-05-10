@@ -12,15 +12,15 @@
         <h1>Independent Diabetes Tool</h1>
         <h3>Find out your risk for diabetes</h3>
       </header>
-    </a>  
+    </a>
       <main>
 
         <!-- Introduction -->
         <div id="introduction">
           <h2>Introduction</h2>
-          <p>The purpose of this webpage is to demostrate that using vanilla js can achieve a complete web application.</p>
-          <p>None of the data here collected is saved in any shape or form.</p>
-          <p>The test follows the same one that can be found in <a href="https://riskscore.diabetes.org.uk/start"><strong>here</strong></a>.</p>
+          <p>The purpose of this webpage is to demostrate that using vanilla js can achieve a complete web application.
+            None of the data here collected is saved in any shape or form. The test follows the same one that can be found in <a href="https://riskscore.diabetes.org.uk/start"><strong>here</strong></a>.</p><br>
+          <p>It is important that if you seek medical advice regarding diabetes you visit your doctor.</p>
           <div class="button tool" id=ok>Ok</div>
           <a href="index.html"><div class="button tool" id=back>Back</div></a>
         </div>
@@ -41,6 +41,28 @@
           <br>
           <div class="button tool" id="ok_age">Ok</div>
        </div>
+
+       <!-- Question 3: Ethnic -->
+       <h2 id="ethnic_title">3) What is your ethnic background?</h2>
+           <div id="question3">
+               <div class="container left">
+                 <div class="button tool list" id="asian">South Asian</div>
+                 <div class="button tool list" id="black">Black</div>
+                 <div class="button tool list" id="chinese">Chinese</div>
+               </div>
+               <div class="container right">
+                 <div class="button tool list" id="mixed">Mixed Etnicity</div>
+                 <div class="button tool list" id="white">White</div>
+                 <div class="button tool list" id="none">None of These</div>
+               </div>
+           </div>
+
+        <!-- Question 4: Family -->
+          <div id="question4">
+              <h2 id="family_title">4) Do you have a parent, brother, sister and/or own child with diabetes?</h2>
+              <div class="button tool" id="familyYes">Yes</div>
+              <div class="button tool" id="familyNo">No</div>
+          </div>
 
       </main>
       <footer>

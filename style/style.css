@@ -140,6 +140,14 @@ footer{
   margin: 0.8em auto;
   width: 50%;
 }
+.list{
+	display:flex;
+	text-align: center;
+}
+
+.list div{
+	text-align: center;
+}
 
 .image{
   display: inline;
@@ -176,10 +184,21 @@ span {
 
 /*Tool Style*/
 
-#question1{
+
+
+#question1, #question2, #question3, #question4, #question5, #question6, #question7, #question8{
   display: none;
 }
 
-#question2{
-	display: none;
+
+#question3 .left{
+	flex: 1;
+}
+
+#question3 .right{
+	flex:1;
+}
+
+#ethnic_title{
+	display:none;
 }

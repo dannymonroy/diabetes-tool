@@ -18,7 +18,7 @@ function transition(num) {
         document.getElementById("question" + (num - 1)).style.display = "none";
         document.getElementById("question" + num).style.display = "inline";
     } else {
-        document.getElementById("question" + (num - 1)).style.display = "none";
+        document.getElementById("question" + (num - 1)).style.display = "flex";
         document.getElementById("question" + num).style.display = "inline-block";
     }
 }
