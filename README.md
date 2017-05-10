@@ -6,7 +6,7 @@ Nothing apart from HTML5, CSS3 and JavaScript is used to achieved. The applicati
 
 # Disclaimer
 
-At any stage the data provided is stored or processed in any way. For real medical advice visit the UK Diabetes association which provide complete information about diabetes. You can visit their webpage [here:](https://www.diabetes.org.uk/) . 
+At any stage the data provided is stored or processed in any way. For real medical advice visit the UK Diabetes association which provide complete information about diabetes. You can visit their webpage [here](https://www.diabetes.org.uk/) .
 
 # Next Features
 
