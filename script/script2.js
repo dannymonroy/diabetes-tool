@@ -162,10 +162,49 @@ function familyValidation() {
     }
 }
 
+function waistValueAssignment(waist){
+    document.getElementById("waist_title").innerHTML = "Your waist is " + waist +" cm";
+
+    if(waist < 90){
+        value += 0;
+    } else if(waist >= 90 && waist <= 99.9){
+        value += 4;
+    } else if(waist >= 100 && waist <= 109.9){
+        value += 6;
+    } else {
+        value += 9;
+
+    }
+    window.setTimeout(transition, 1500, 6);
+}
+
+function waistValidation() {
+    var numRegEx = /[0-9]{1,3}/;
+    document.getElementById("ok_waist").onclick = function () {
+        var waist =  document.getElementById("waist").value;
+        var waistEmpty = document.getElementById("waistEmpty");
+        var waistWrong = document.getElementById("waistWrong");
+
+        if(waist === ""){
+            waistEmpty.style.display = "block";
+            waistWrong.style.display = "none";
+        } else if(!numRegEx.test(waist)){
+            waistEmpty.style.display = "none";
+            waistWrong.style.display = "block";
+        } else {
+            waistEmpty.style.display = "none";
+            waistWrong.style.display = "none";
+            waistValueAssignment(waist);
+        }
+    }
+}
+
 window.onload = function () {
   startTest();
   genderValidation();
   ageValidation();
   ethnicValidation();
   familyValidation();
+  waistValidation();
+
 }
