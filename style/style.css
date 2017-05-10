@@ -69,9 +69,11 @@ h2{
 h2:first-child{
   margin-top: 0;
 }
+
 h3{
   font-size: 1.7em;
 }
+
 h4{
   font-size: 1.5em;
   font-weight: bold;
@@ -106,7 +108,7 @@ nav{
 
 main{
   background-color: #FFFFFF;
-  padding: 0.7em;
+  padding: 0.8em;
   border-radius: 20px;
 }
 
@@ -116,9 +118,7 @@ footer{
   border-radius: 20px;
   margin-top: 1em;
   padding: 0.5em;
-
 }
-
 
 .button{
   display: block;
@@ -132,14 +132,15 @@ footer{
 }
 
 .button:hover{
-    background-color: #FFF;
-    color:tomato;
+    background-color: #4e95a3;
+    color:#FFFFFF;
 }
 
 .tool{
   margin: 0.8em auto;
   width: 50%;
 }
+
 .list{
 	display:flex;
 	text-align: center;
@@ -156,8 +157,11 @@ footer{
   overflow: hidden;
 }
 
+.float{
+	clear: both;
+}
+
 input[type="text"] {
-    //border: dashed white;
     border-radius: 5%;
     background-color: #609DBC;
     font-size: 2em;
@@ -174,9 +178,8 @@ span {
     display: none;
     font-size: 1.3em;
     font-family: "Helvetica", sans-serif;
-    color: black;
-    border: groove black;
-    background-color: lavender;
+    color: #FFFFFF;
+    background-color: #ff6347;
     padding: 1%;
     margin-top: 2%;
     text-align: center;
@@ -184,9 +187,7 @@ span {
 
 /*Tool Style*/
 
-
-
-#question1, #question2, #question3,#ethnic_title, #question4, #question5, #question6, #question7, #question8{
+#question1, #question2, #question3, #ethnic_title, #question4, #question5, #question6, #question7, #question8{
   display: none;
 }
 
@@ -196,7 +197,7 @@ span {
 }
 
 #question3 .right{
-	flex:1;
+	flex: 1;
 }
 
 .answers{

@@ -57,8 +57,8 @@ function genderValidation() {
 }
 
 /* Age Validation
-* AgeValueAssigment: Assigns the value if the validation is passed/
-* ageValidation: Confirms that the age is not empty, older than 18 and is a valid digit for an age.
+  ageValueAssigment: Assigns the value if the validation is passed/
+  ageValidation: Confirms that the age is not empty, older than 18 and is a valid digit for an age.
 */
 
 function ageValueAssignment(age){
