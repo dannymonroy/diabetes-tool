@@ -199,6 +199,93 @@ function waistValidation() {
     }
 }
 
+function bmiCalculation(height, weight) {
+
+    height = height /100;
+
+    var bmi = (weight / height ) / height;
+    bmi = Math.round(bmi);
+    document.getElementById("bmi").value = bmi;
+
+    if(bmi < 25){
+        value += 0;
+    } else if (bmi >= 25 && bmi < 30) {
+        value += 3;
+    } else if (bmi >= 30 && bmi < 35) {
+        value += 5;
+    } else {
+        value += 8;
+    }
+
+    window.setTimeout(transition,2000,7);
+}
+
+function bmiValidation(){
+
+    var numRegEx = /[0-9]{1,3}/;
+
+    document.getElementById("ok_bmi").onclick = function () {
+
+        var height =  document.getElementById("height").value;
+        var heightEmpty = document.getElementById("heightEmpty");
+        var heightWrong = document.getElementById("heightWrong");
+        var weight =  document.getElementById("weight").value;
+        var weightEmpty = document.getElementById("weightEmpty");
+        var weightWrong = document.getElementById("weightWrong");
+
+        if(height === "" && weight !== ""){
+            heightEmpty.style.display = "block";
+            heightWrong.style.display = "none";
+        } else if(!numRegEx.test(height) && numRegEx.test(weight)){
+            heightEmpty.style.display = "none";
+            heightWrong.style.display = "block";
+        } else if (weight === "" && !height === ""){
+            weightEmpty.style.display = "block";
+            weightWrong.style.display = "none";
+        } else if (!numRegEx.test(weight) && numRegEx.test(height)) {
+            weightEmpty.style.display = "none";
+            weightWrong.style.display = "block";
+        } else if (height === "" && weight === ""){
+            heightEmpty.style.display = "block";
+            weightEmpty.style.display = "block";
+        } else if (!numRegEx.test(height) && !numRegEx.test(weight)) {
+            heightWrong.style.display = "block";
+            weightWrong.style.display = "block";
+        } else {
+            bmiCalculation(height,weight);
+        }
+    }
+}
+
+function medicationValidation() {
+    document.getElementById("medicationYes").onclick = function () {
+        value += 5;
+        document.getElementById("medication_title").innerHTML = "7) You have taken medication for High Pressure";
+        finalAnswer(value);
+        window.setTimeout(transition, 1500, 8);
+    }
+    document.getElementById("medicationNo").onclick = function () {
+        value += 0;
+        document.getElementById("medication_title").innerHTML = "7) You haven't taken medication for High Pressure";
+        finalAnswer(value);
+        window.setTimeout(transition, 1500, 8);
+    }
+
+}
+
+function finalAnswer(value) {
+
+    if(value >= 0 && value <= 6){
+        document.getElementById("lowRisk").style.display = "inline";
+    } else if(value > 6 && value <= 15){
+        document.getElementById("increasedRisk").style.display = "inline";
+    } else if(value > 16 && value <= 24){
+        document.getElementById("moderateRisk").style.display = "inline";
+    } else {
+        document.getElementById("highRisk").style.display = "inline";
+    }
+}
+
 window.onload = function () {
   startTest();
   genderValidation();
@@ -206,5 +293,7 @@ window.onload = function () {
   ethnicValidation();
   familyValidation();
   waistValidation();
+  bmiValidation();
+  medicationValidation();
 
 }

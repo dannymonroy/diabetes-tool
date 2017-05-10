@@ -186,7 +186,7 @@ span {
 
 
 
-#question1, #question2, #question3, #question4, #question5, #question6, #question7, #question8{
+#question1, #question2, #question3,#ethnic_title, #question4, #question5, #question6, #question7, #question8{
   display: none;
 }
 
@@ -199,6 +199,6 @@ span {
 	flex:1;
 }
 
-#ethnic_title{
-	display:none;
+.answers{
+  display: none;
 }
